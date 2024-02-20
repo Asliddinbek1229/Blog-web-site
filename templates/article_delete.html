@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Postlar{% endblock %}
+
+{% block content %}
+
+    <h1>Postni O'chirish</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>{{ article.title }} nomli po'stni o'chirishni istaysizmi?</p>
+        <button class="btn btn-danger ml-2">Ha</button>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Postlar{% endblock %}
+
+{% block content %}
+
+    <h1>Postni tahrirlash</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form|crispy }}
+        <button class="btn btn-info ml-2" type="submit">Saqlash</button>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Bosh Sahifa{% endblock title %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h3 style="color: green;">Siz saytga kirgansiz</h3>
+        <a href="{% url 'article_list' %}" class="btn btn-info">Postlarni ko'rish</a>
+        
+    {% else %}
+        <h3 style="color: red;">Siz saytga kirmagansiz</h3>
+    {% endif %}
+
+
+{% endblock content %}
